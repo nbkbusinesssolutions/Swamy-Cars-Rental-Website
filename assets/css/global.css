@@ -109,6 +109,7 @@ body:not(.motion-ready) .animate-on-scroll {
   transition: transform var(--motion-medium) var(--ease-out), background var(--motion-medium) ease, box-shadow var(--motion-medium) ease;
   --header-height: 68px;
   height: var(--header-height);
+  overflow: visible;
   contain: paint;
 }
 
@@ -146,6 +147,14 @@ body.use-fixed-header-offset .faq-hero,
 body.use-fixed-header-offset .booking-hero,
 body.use-fixed-header-offset .cars-hero {
   padding-top: calc(var(--header-height, 68px) + clamp(1rem, 3vw, 2rem));
+}
+
+@media (max-width: 767px) {
+  .site-header {
+    height: auto;
+    min-height: var(--header-height, 68px);
+    contain: none;
+  }
 }
 
 .site-header__wrap {
