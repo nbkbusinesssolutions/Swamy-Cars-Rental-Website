@@ -1,4 +1,4 @@
-# Swami Cars Rental - robots.txt
+# Swami Car Rentals - robots.txt
 # Last Updated: 2026-01-08
 
 User-agent: *

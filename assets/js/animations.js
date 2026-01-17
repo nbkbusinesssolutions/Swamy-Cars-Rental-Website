@@ -1,5 +1,5 @@
 /**
- * Swami Cars Rental - Animation System
+ * Swami Car Rentals - Animation System
  * Handles scroll-triggered animations, counters, and motion effects
  */
 
