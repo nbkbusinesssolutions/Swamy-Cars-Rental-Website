@@ -92,6 +92,7 @@ body:not(.motion-ready) .animate-on-scroll {
   z-index: 1100;
   background: linear-gradient(90deg, #f39c12, #3498db);
   transition: width 0.2s ease;
+  will-change: transform, opacity;
 }
 
 .site-header {
@@ -108,6 +109,7 @@ body:not(.motion-ready) .animate-on-scroll {
   transition: transform var(--motion-medium) var(--ease-out), background var(--motion-medium) ease, box-shadow var(--motion-medium) ease;
   --header-height: 68px;
   height: var(--header-height);
+  contain: paint;
 }
 
 .site-header.shadow-enhance {
@@ -155,6 +157,7 @@ body.use-fixed-header-offset .cars-hero {
   justify-content: space-between;
   gap: 0.5rem;
   min-height: 4.25rem;
+  contain: paint;
 }
 
 @media (min-width: 1024px) {
@@ -170,6 +173,7 @@ body.use-fixed-header-offset .cars-hero {
   text-decoration: none;
   color: inherit;
   transition: transform var(--motion-fast) var(--ease-out);
+  will-change: transform, opacity;
 }
 
 .site-logo:hover {
@@ -288,6 +292,7 @@ body.use-fixed-header-offset .cars-hero {
   color: var(--text-primary, #0f172a);
   text-decoration: none;
   transition: color var(--motion-fast) ease, background var(--motion-fast) ease, transform var(--motion-fast) var(--ease-out);
+  will-change: transform, opacity;
 }
 
 .nav-link:hover,
@@ -314,6 +319,7 @@ body.use-fixed-header-offset .cars-hero {
   box-shadow: 0 12px 26px rgba(255, 138, 61, 0.35);
   position: relative;
   overflow: hidden;
+  will-change: transform, opacity;
 }
 
 .nav-link--cta::after {
@@ -367,6 +373,7 @@ body.use-fixed-header-offset .cars-hero {
   cursor: pointer;
   transition: transform var(--motion-medium) var(--ease-out), box-shadow var(--motion-medium) var(--ease-out), background var(--motion-medium) var(--ease-out), color var(--motion-medium) var(--ease-out), border-color var(--motion-medium) var(--ease-out), opacity var(--motion-medium) var(--ease-out);
   white-space: nowrap;
+  will-change: transform, opacity;
 }
 
 .site-actions .btn.btn-whatsapp {
@@ -408,7 +415,7 @@ body.use-fixed-header-offset .cars-hero {
   box-shadow: 0 20px 40px rgba(37, 211, 102, 0.35);
   transition: transform var(--motion-medium) var(--ease-out), box-shadow var(--motion-medium) var(--ease-out), background var(--motion-medium) var(--ease-out);
   touch-action: manipulation;
-  outline: none;
+  will-change: transform, opacity;
 }
 
 .floating-whatsapp:hover,
@@ -446,6 +453,7 @@ body.use-fixed-header-offset .cars-hero {
   background: var(--bg-alternate, #f8fafc);
   color: var(--text-heading, #0f172a);
   transition: border-color var(--motion-fast) ease, transform var(--motion-fast) var(--ease-out);
+  will-change: transform, opacity;
 }
 
 .nav-toggle:hover,
@@ -497,6 +505,7 @@ body.use-fixed-header-offset .cars-hero {
   padding: 0.75rem 1rem;
   border-radius: 0.75rem;
   transition: color var(--motion-fast) ease, background var(--motion-fast) ease, transform var(--motion-fast) var(--ease-out);
+  will-change: transform, opacity;
 }
 
 .mobile-menu .nav-link:hover {
@@ -634,6 +643,7 @@ main > section:first-child.header-clear {
   font-size: 1rem;
   background: #fff;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  will-change: border-color, box-shadow;
 }
 
 .form-input:focus {
@@ -670,6 +680,7 @@ main > section:first-child.header-clear {
   padding: 0.5rem 1rem;
   z-index: 10000;
   transition: top 0.3s ease;
+  will-change: transform, opacity;
 }
 
 .skip-link:focus {
@@ -681,6 +692,7 @@ main > section:first-child.header-clear {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s infinite;
+  will-change: transform, opacity;
 }
 
 @keyframes skeleton-loading {
@@ -744,6 +756,7 @@ main > section:first-child.header-clear {
   color: white;
   overflow: hidden;
   margin-top: 0;
+  contain: paint;
 }
 
 .about-hero::before {
@@ -784,6 +797,7 @@ main > section:first-child.header-clear {
   font-family: var(--font-display, 'Sora', sans-serif);
   line-height: 1.1;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  will-change: transform, opacity;
 }
 
 .about-hero .subtitle {
@@ -818,6 +832,7 @@ main > section:first-child.header-clear {
   font-size: 1rem;
   transition: all 0.3s var(--anim-ease);
   box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+  will-change: transform, opacity;
 }
 
 .about-hero .btn-whatsapp:hover {
@@ -846,6 +861,7 @@ main > section:first-child.header-clear {
   max-width: 1200px;
   margin: 0 auto;
   padding: clamp(3rem, 7vw, 5.5rem) 1rem;
+  contain: paint;
 }
 
 .content-section:nth-child(even) {
@@ -868,6 +884,7 @@ main > section:first-child.header-clear {
   color: var(--text-heading);
   font-family: var(--font-display, 'Sora', sans-serif);
   letter-spacing: -0.02em;
+  will-change: transform, opacity;
 }
 
 .section-subtitle {
@@ -899,6 +916,7 @@ main > section:first-child.header-clear {
   gap: clamp(2rem, 5vw, 3rem);
   align-items: center;
   margin-bottom: clamp(3rem, 6vw, 4rem);
+  contain: paint;
 }
 
 .story-text {
@@ -941,6 +959,7 @@ main > section:first-child.header-clear {
   margin-bottom: clamp(3rem, 6vw, 4rem);
   position: relative;
   overflow: hidden;
+  contain: paint;
 }
 
 .stats-banner::before {
@@ -971,6 +990,7 @@ main > section:first-child.header-clear {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, opacity;
 }
 
 .stat-item:hover {
@@ -998,6 +1018,7 @@ main > section:first-child.header-clear {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: clamp(1.25rem, 3vw, 1.75rem);
   margin-top: 2.5rem;
+  contain: paint;
 }
 
 .promise-item {
@@ -1010,6 +1031,7 @@ main > section:first-child.header-clear {
   display: flex;
   gap: 1.25rem;
   align-items: flex-start;
+  will-change: transform, opacity;
 }
 
 .promise-item:hover {
@@ -1102,6 +1124,7 @@ main > section:first-child.header-clear {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  contain: paint;
 }
 
 .testimonial-card {
@@ -1114,6 +1137,7 @@ main > section:first-child.header-clear {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  will-change: transform, opacity;
 }
 
 .testimonial-card:hover {
@@ -1195,6 +1219,7 @@ main > section:first-child.header-clear {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(1.5rem, 4vw, 2.5rem);
+  contain: paint;
 }
 
 .location-info {
@@ -1258,6 +1283,7 @@ main > section:first-child.header-clear {
   text-align: center;
   position: relative;
   overflow: hidden;
+  contain: paint;
 }
 
 .final-cta::before {
@@ -1279,6 +1305,7 @@ main > section:first-child.header-clear {
   font-family: var(--font-display, 'Sora', sans-serif);
   position: relative;
   z-index: 1;
+  will-change: transform, opacity;
 }
 
 .final-cta p {
@@ -1311,6 +1338,7 @@ main > section:first-child.header-clear {
   font-size: 1rem;
   transition: all 0.3s var(--anim-ease);
   box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+  will-change: transform, opacity;
 }
 
 .final-cta .btn-whatsapp:hover {
@@ -1447,6 +1475,7 @@ main > section:first-child.header-clear {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(148, 163, 184, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, opacity;
 }
 
 .car-card:hover {
