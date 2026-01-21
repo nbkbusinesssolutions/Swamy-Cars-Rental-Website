@@ -49,3 +49,9 @@ Thumbs.db
 *.log
 *.tmp
 *.temp
+
+# Backup folder (original static HTML files)
+backup/
+
+# TypeScript build info
+*.tsbuildinfo
