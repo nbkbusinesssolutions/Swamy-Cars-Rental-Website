@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <>
       <section className="relative py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/hero/hero-bg.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('/images/hero/hero-image.webp')] bg-cover bg-center opacity-20" />
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.span
             initial={{ opacity: 0, y: -10 }}
@@ -90,7 +90,7 @@ export default function ContactPage() {
               <h3 className="font-display text-xl font-bold text-gray-900 mb-3">Location</h3>
               <p className="text-gray-600 mb-4">Visit us in person</p>
               <a
-                href="https://maps.google.com/?q=Red+Roof+Hotel+Madel+Madgaon+Goa"
+                href="https://maps.app.goo.gl/wb3oQL4we6FBymwT8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-amber-600 font-semibold hover:text-amber-700"
@@ -129,16 +129,16 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            <div className="aspect-[16/9] bg-gray-200">
+            <div className="aspect-[4/3] sm:aspect-[16/9] bg-gray-200">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.5!2d74.124!3d15.2993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDE3JzU3LjUiTiA3NMKwMDcnMjYuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.704901035966!2d73.95055757516567!3d15.288768685283232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb1c04a0f2219%3A0x6cd8d2c5c3858561!2sSachin%20car%20rentals!5e1!3m2!1sen!2sin!4v1769005183577!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Swami Car Rentals Location"
+                title="Sachin Car Rentals Location"
               />
             </div>
           </AnimatedSection>

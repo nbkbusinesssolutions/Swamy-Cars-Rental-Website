@@ -252,73 +252,83 @@ export default function HomePage() {
             <p className="text-gray-600">Real reviews from happy customers who explored Goa with us</p>
           </AnimatedSection>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                name: 'Tejas Chavan',
-                review: 'I took a Thar on rent for 5 days from Madgaon to explore Goa. The car was in good condition and really comfortable for the trip. The owner was very helpful and supportive throughout. Everything went smoothly without any issues. Had a great experience overall.',
-                time: '8 months ago',
-                rating: 5,
-              },
-              {
-                name: 'Sukruti',
-                review: 'Best Car Rentals I experienced. The owner Sachin himself was very helpful.',
-                time: '8 months ago',
-                rating: 5,
-              },
-              {
-                name: 'Shreyash Patade',
-                review: 'Excellent service. On time and promptly responding to all the queries. Vehicles are offered very well maintained.',
-                time: '8 months ago',
-                rating: 5,
-              },
-              {
-                name: 'Swarali Chavan',
-                review: 'One of the best car rental service in Madgaon. We booked self driven car for 5 days. Well maintained car. We enjoyed our journey with our family, thank you Sachin car rental service in Madgao.',
-                time: 'a year ago',
-                rating: 5,
-              },
-              {
-                name: 'Aniruddha Khedekar',
-                review: 'Really nice service and affordable rents. The vehicle condition was also really good.',
-                time: '8 months ago',
-                rating: 5,
-                badge: 'Local Guide',
-              },
-              {
-                name: 'Raja Sekharan',
-                review: 'Quick service, very responsive and good car condition. One of the best choice to go for a car rental in Goa.',
-                time: 'a year ago',
-                rating: 5,
-                badge: 'Local Guide',
-              },
-            ].map((testimonial, index) => (
-              <StaggerItem key={index} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-4">{testimonial.review}</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--color-primary-orange)] to-[var(--color-accent-coral)] flex items-center justify-center text-white font-bold text-sm">
-                    {testimonial.name.charAt(0)}
+          <div className="overflow-x-auto scrollbar-hide -mx-4 px-4 pb-4">
+            <div className="flex gap-4 min-w-max">
+              {[
+                {
+                  name: 'Tejas Chavan',
+                  review: 'I took a Thar on rent for 5 days from Madgaon to explore Goa. The car was in good condition and really comfortable for the trip. The owner was very helpful and supportive throughout.',
+                  time: '8 months ago',
+                  rating: 5,
+                },
+                {
+                  name: 'Sukruti',
+                  review: 'Best Car Rentals I experienced. The owner Sachin himself was very helpful.',
+                  time: '8 months ago',
+                  rating: 5,
+                },
+                {
+                  name: 'Shreyash Patade',
+                  review: 'Excellent service. On time and promptly responding to all the queries. Vehicles are offered very well maintained.',
+                  time: '8 months ago',
+                  rating: 5,
+                },
+                {
+                  name: 'Swarali Chavan',
+                  review: 'One of the best car rental service in Madgaon. We booked self driven car for 5 days. Well maintained car. We enjoyed our journey with our family.',
+                  time: 'a year ago',
+                  rating: 5,
+                },
+                {
+                  name: 'Aniruddha Khedekar',
+                  review: 'Really nice service and affordable rents. The vehicle condition was also really good.',
+                  time: '8 months ago',
+                  rating: 5,
+                  badge: 'Local Guide',
+                },
+                {
+                  name: 'Raja Sekharan',
+                  review: 'Quick service, very responsive and good car condition. One of the best choice to go for a car rental in Goa.',
+                  time: 'a year ago',
+                  rating: 5,
+                  badge: 'Local Guide',
+                },
+              ].map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="w-[300px] sm:w-[320px] flex-shrink-0 bg-white p-5 rounded-2xl shadow-sm border border-gray-100"
+                >
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
                   </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-gray-900 text-sm">{testimonial.name}</span>
-                      {testimonial.badge && (
-                        <span className="text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full">{testimonial.badge}</span>
-                      )}
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{testimonial.review}</p>
+                  <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
+                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[var(--color-primary-orange)] to-[var(--color-accent-coral)] flex items-center justify-center text-white font-bold text-sm">
+                      {testimonial.name.charAt(0)}
                     </div>
-                    <span className="text-xs text-gray-500">{testimonial.time}</span>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-semibold text-gray-900 text-sm">{testimonial.name}</span>
+                        {testimonial.badge && (
+                          <span className="text-[10px] bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded-full">{testimonial.badge}</span>
+                        )}
+                      </div>
+                      <span className="text-xs text-gray-500">{testimonial.time}</span>
+                    </div>
                   </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          <p className="text-center text-sm text-gray-500 mt-4 md:hidden">Swipe to see more reviews</p>
 
           <AnimatedSection className="text-center mt-10">
             <a
