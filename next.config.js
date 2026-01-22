@@ -6,8 +6,9 @@ const nextConfig = {
   },
   allowedDevOrigins: [
     '*.replit.dev',
+    '*.repl.co',
     '*.sisko.replit.dev',
-    '42962344-2f9a-42c2-ae7f-d50379562371-00-1lgx6sxq5jwiv.sisko.replit.dev',
+    '*.sisko.repl.co',
     '127.0.0.1',
     'localhost',
   ],
