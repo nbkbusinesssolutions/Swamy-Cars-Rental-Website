@@ -616,14 +616,14 @@ export default function HomePage() {
                     </div>
                     <h4 className="font-semibold text-gray-900">Phone / WhatsApp</h4>
                   </div>
-                  <a href={`tel:+${WHATSAPP_NUMBER}`} className="text-lg font-bold text-[var(--color-primary-orange)] hover:underline">
+                  <a href={`tel:+${WHATSAPP_NUMBER}`} className="text-lg font-bold text-gray-900 hover:text-gray-700 transition-colors">
                     7972719764
                   </a>
                 </div>
 
                 <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                    <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 text-gray-600">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
