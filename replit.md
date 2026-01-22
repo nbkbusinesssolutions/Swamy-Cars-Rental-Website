@@ -7,14 +7,24 @@ A car rental website for Swami Car Rental in Goa, India. Migrated from static HT
 ```
 src/
 ├── app/                    # Next.js App Router pages
-│   ├── layout.tsx          # Root layout with Header, Footer, WhatsAppButton
+│   ├── layout.tsx          # Root layout with SEO metadata, Header, Footer
 │   ├── page.tsx            # Home page
 │   ├── globals.css         # Global styles with Tailwind v4 @theme
-│   ├── about/page.tsx      # About page
-│   ├── booking/page.tsx    # Booking page
-│   ├── cars/page.tsx       # Cars page with filter
-│   ├── contact/page.tsx    # Contact page with map
-│   ├── faq/page.tsx        # FAQ page with accordion
+│   ├── about/
+│   │   ├── layout.tsx      # About page SEO metadata
+│   │   └── page.tsx        # About page
+│   ├── booking/
+│   │   ├── layout.tsx      # Booking page SEO metadata
+│   │   └── page.tsx        # Booking page
+│   ├── cars/
+│   │   ├── layout.tsx      # Cars page SEO metadata
+│   │   └── page.tsx        # Cars page with filter
+│   ├── contact/
+│   │   ├── layout.tsx      # Contact page SEO metadata
+│   │   └── page.tsx        # Contact page with map
+│   ├── faq/
+│   │   ├── layout.tsx      # FAQ page SEO metadata
+│   │   └── page.tsx        # FAQ page with accordion
 │   └── not-found.tsx       # 404 page
 ├── components/             # Reusable React components
 │   ├── Header.tsx          # Navigation with mobile menu
@@ -106,6 +116,13 @@ backup/                     # Original static HTML files (archived)
 5. Premium cars = less flashy badges (restraint = luxury)
 
 ## Recent Changes
+- Jan 2026: Complete SEO optimization for Google indexing
+  - Added page-specific metadata (title, description, canonical URL, OG tags) for all pages
+  - Created layout.tsx files for cars, booking, about, faq, contact pages
+  - Updated sitemap.xml with clean Next.js URLs (removed .html extensions)
+  - Updated robots.txt with Next.js paths and sitemap reference
+  - Added keywords, robots directives, and enhanced OG/Twitter cards to root layout
+  - LocalBusiness JSON-LD structured data for rich search results
 - Jan 2026: Mobile UX optimization (360px-430px viewport)
   - Hero Section: responsive typography (1.625rem mobile, 2.5rem desktop), full-width CTAs
   - All buttons/tap targets: 48px minimum height for accessibility
