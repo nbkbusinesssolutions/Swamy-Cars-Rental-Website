@@ -15,25 +15,23 @@ pids/
 
 # Build outputs
 build/
+.next/
+out/
 
 # Testing & coverage
 coverage/
 .nyc_output/
-.pytest_cache/
 
 # Environment files
 .env
-.env.*
-!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Caches
 .cache/
 .parcel-cache/
-.next/
-out/
-
-# Vite build output
-dist/
 
 # Editors & IDEs
 .vscode/
@@ -50,8 +48,11 @@ Thumbs.db
 *.tmp
 *.temp
 
-# Backup folder (original static HTML files)
-backup/
-
 # TypeScript build info
 *.tsbuildinfo
+next-env.d.ts
+
+# Replit specific (not needed for Netlify)
+.replit
+.local/
+replit.md
