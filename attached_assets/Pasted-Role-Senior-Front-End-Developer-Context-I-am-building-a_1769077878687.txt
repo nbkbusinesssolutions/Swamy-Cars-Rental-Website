@@ -1,0 +1,40 @@
+Role: Senior Front-End Developer Context: I am building a car rental website for "Swamy Cars Rental" in Madgaon, Goa. Task: Build a high-performance, animated Hero Section using the project's tech stack (Next.js 14, Tailwind CSS v4, Framer Motion, and TypeScript).
+
+1. Content Strategy (The Text): Implement a rotating typing animation for the main <h1> headline. Use these three catchy, benefit-driven phrases:
+
+"Well-maintained self-drive cars right here in Madgaon."
+
+"Explore Goa on your terms. Start your journey in minutes."
+
+"Your perfect ride awaits. Trusted by 500+ locals."
+
+2. Animation Sequence (Framer Motion Logic): Create a professional entry sequence using staggerChildren and variants:
+
+The Trust Badge: (Top) Fade in and slide down slightly at 0.2s.
+
+The Headline: (Middle) Typing animation begins at 0.4s. Ensure smooth transitions between phrases (fade out current, type in next).
+
+The Subheading: "WhatsApp us, pick up near KTC Bus Stand, and start exploring Goa in minutes." — Fade in and slide up after the first headline finishes typing.
+
+The CTAs: (Buttons) Staggered fade-in (0.2s apart) once the subheading is visible.
+
+Primary: Green "Book on WhatsApp" (with a pulse or hover-glow effect).
+
+Secondary: Glassmorphism/Outlined "View Our Fleet".
+
+3. Technical Specs:
+
+Styling: Use Tailwind CSS v4. Use @theme variables for brand colors. Ensure the background image has a dark overlay (gradient to black) to make the white/orange text pop.
+
+Fonts: Use Space Grotesk for the headlines and Inter for the body text.
+
+Responsiveness: Optimize for mobile first. On small screens, ensure the text doesn't overlap and the typing effect is centered.
+
+Code Quality: Use TypeScript (.tsx). Create a reusable TypingText component for the headline.
+
+What This Optimization Does for You
+Uses Your Specific Tech: By mentioning Framer Motion and Tailwind v4, Replit will write modern code that doesn't rely on old CSS hacks.
+
+Handles the "Typing" Problem: Instead of just "text," it asks for a TypingText component. This makes the code modular and easier to fix if you want to change the words later.
+
+Visual Polish: It specifically asks for Glassmorphism and Staggered Animations, which are the secrets to making a website look "expensive" and professional.
