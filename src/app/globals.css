@@ -235,4 +235,17 @@
       font-size: 0.9375rem;
     }
   }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(37, 211, 102, 0.5);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
 }
