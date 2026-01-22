@@ -107,7 +107,7 @@ export default function HomePage() {
       <section className="section-shell bg-white">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="section-heading">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 text-[var(--color-primary-orange)] text-sm font-semibold rounded-full mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 text-sm font-semibold rounded-full mb-4">
               Why Choose Us
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
@@ -157,7 +157,7 @@ export default function HomePage() {
               },
             ].map((feature, index) => (
               <StaggerItem key={index} className="text-center p-6 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-100 to-orange-50 text-[var(--color-primary-orange)]">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-xl bg-orange-50 text-[var(--color-primary-orange)]">
                   {feature.icon}
                 </div>
                 <h3 className="font-display text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
@@ -171,7 +171,7 @@ export default function HomePage() {
       <section className="section-shell bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="section-heading">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 text-sm font-semibold rounded-full mb-4">
               Our Fleet
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">

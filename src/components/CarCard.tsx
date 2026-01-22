@@ -38,7 +38,7 @@ export default function CarCard({ car, index = 0 }: CarCardProps) {
             car.badge === 'Most Wanted' ? 'bg-gradient-to-r from-[var(--color-primary-orange)] to-amber-500 text-white' :
             car.badge === 'Budget Pick' ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white' :
             car.badge === 'Premium MPV' ? 'bg-gradient-to-r from-slate-700 to-slate-900 text-white' :
-            car.badge === 'City Favorite' ? 'bg-blue-50 text-blue-700 border border-blue-200' :
+            car.badge === 'City Favorite' ? 'bg-orange-50 text-orange-600 border border-orange-200' :
             car.badge === 'SUV Favorite' ? 'bg-amber-50 text-amber-700 border border-amber-200' :
             car.badge === 'Family Ready' ? 'bg-slate-100 text-slate-700 border border-slate-200' :
             car.badge === 'Compact' ? 'bg-gray-100 text-gray-700 border border-gray-200' :

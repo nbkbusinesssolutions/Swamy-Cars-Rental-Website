@@ -62,37 +62,54 @@ backup/                     # Original static HTML files (archived)
 - Technical modernization only (migration to Next.js/TypeScript)
 - Framer Motion for animations (replacing CSS animations)
 
-## Color System (Refined per Agency Audit)
+## Color System (Agency CRO Audit - Jan 2026)
 
-### Primary Colors
-- **Brand Orange** `#F39C12` - Conversion CTAs, prices, action elements (use sparingly)
-- **Dark Slate** `#0f172a` - Footer, authority sections, trust anchors
+### Primary (Conversion-Driving)
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Orange | `#F39C12` | Book Now, primary CTAs, prices |
+| Orange Hover | `#E67E22` | Hover states only (never static) |
+
+### Secondary (Supporting Actions)
+| Color | Hex | Usage |
+|-------|-----|-------|
+| WhatsApp Green | `#25D366` | WhatsApp CTA only |
+| Call Gray | `#F3F4F6` | Phone CTA (neutral, non-competing) |
 
 ### Neutral Stack (90% of UI)
-- Text: `gray-900` → `gray-500` (heading to muted hierarchy)
-- Backgrounds: `white`, `gray-50`, `#F8F9FA`
-- Borders: `gray-100`
+| Color | Usage |
+|-------|-------|
+| `gray-900` | Headings, dark hero backgrounds |
+| `gray-600` | Body text |
+| `gray-500` | Muted text |
+| `gray-100` | Borders, inactive states |
+| `gray-50` | Alternate backgrounds |
+| `white` | Main canvas |
 
 ### Badge System (Tiered)
-- **Tier 1 (Gradients)**: Most Wanted, Budget Pick, Premium MPV - business-critical
+- **Tier 1 (Gradients)**: Most Wanted, Budget Pick, Premium MPV - conversion-critical
 - **Tier 2 (Flat)**: City Favorite, SUV Favorite, Family Ready, Compact - informational only
 
-### CTA Colors
-- Primary: Solid orange `#F39C12` (no gradients for trust)
-- WhatsApp: Official green `#25D366`
-- Call: Neutral gray background
+### Forbidden Colors (Removed)
+- ~~Secondary Blue `#3498DB`~~ - competed with orange
+- ~~Accent Purple `#8E44AD`~~ - no use case
+- ~~Accent Sky `#5DADE2`~~ - no use case
 
 ### Design Rules
 1. Orange = conversion only (1-2 elements per screen max)
-2. Blue = support only (links, icons, info)
-3. Neutrals = majority of UI
-4. Gradients = rare & meaningful (Tier 1 badges only)
+2. Neutrals = majority of UI (90%)
+3. Gradients = rare & meaningful (Tier 1 badges only)
+4. Phone CTA = neutral gray (low friction, don't oversell)
 5. Premium cars = less flashy badges (restraint = luxury)
 
 ## Recent Changes
-- Jan 2026: Refined color system per agency audit - reduced accent colors, solid CTAs
-- Implemented tiered badge system (Tier 1 gradients, Tier 2 flat)
-- Replaced gradient CTAs with solid orange for better trust/conversion
+- Jan 2026: Full CRO color audit implementation
+  - Removed blue, purple, sky colors from CSS variables
+  - Phone icons/links changed to neutral gray
+  - Tier 2 badges changed to flat colors (orange-50, amber-50, slate-100, gray-100)
+  - "Why Choose Us" and "Our Fleet" badges changed to neutral gray
+  - Icon backgrounds simplified from gradients to flat bg-orange-50
+- Added Pickup & Visit Location section with embedded Google Map
 - Complete migration from static HTML/Vite to Next.js 14+ with TypeScript
 - Implemented Tailwind CSS v4 with @theme variables for design tokens
 - Added Framer Motion animations for scroll effects and page transitions
