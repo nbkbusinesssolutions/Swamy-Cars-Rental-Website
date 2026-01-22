@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 interface TypingTextProps {
   phrases: string[];
@@ -17,49 +17,53 @@ export default function TypingText({
   pauseDuration = 2000,
   className = '',
 }: TypingTextProps) {
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState('');
+  const [text, setText] = useState('');
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isWaiting, setIsWaiting] = useState(false);
-
-  const currentPhrase = phrases[currentPhraseIndex];
-
-  const handleTyping = useCallback(() => {
-    if (isWaiting) return;
-
-    if (!isDeleting) {
-      if (displayedText.length < currentPhrase.length) {
-        setDisplayedText(currentPhrase.slice(0, displayedText.length + 1));
-      } else {
-        setIsWaiting(true);
-        setTimeout(() => {
-          setIsWaiting(false);
-          setIsDeleting(true);
-        }, pauseDuration);
-      }
-    } else {
-      if (displayedText.length > 0) {
-        setDisplayedText(displayedText.slice(0, -1));
-      } else {
-        setIsDeleting(false);
-        setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
-      }
-    }
-  }, [displayedText, isDeleting, isWaiting, currentPhrase, pauseDuration, phrases.length]);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(
-      handleTyping,
-      isDeleting ? deletingSpeed : typingSpeed
-    );
-    return () => clearTimeout(timeout);
-  }, [handleTyping, isDeleting, deletingSpeed, typingSpeed]);
+    const currentPhrase = phrases[phraseIndex];
+
+    if (isPaused) {
+      const pauseTimer = setTimeout(() => {
+        setIsPaused(false);
+        setIsDeleting(true);
+      }, pauseDuration);
+      return () => clearTimeout(pauseTimer);
+    }
+
+    if (!isDeleting) {
+      if (charIndex < currentPhrase.length) {
+        const typeTimer = setTimeout(() => {
+          setText(currentPhrase.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        }, typingSpeed);
+        return () => clearTimeout(typeTimer);
+      } else {
+        setIsPaused(true);
+      }
+    } else {
+      if (charIndex > 0) {
+        const deleteTimer = setTimeout(() => {
+          setText(currentPhrase.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        }, deletingSpeed);
+        return () => clearTimeout(deleteTimer);
+      } else {
+        setIsDeleting(false);
+        setPhraseIndex((phraseIndex + 1) % phrases.length);
+      }
+    }
+  }, [charIndex, isDeleting, isPaused, phraseIndex, phrases, typingSpeed, deletingSpeed, pauseDuration]);
 
   return (
     <span className={className}>
-      <span className="inline">{displayedText}</span>
+      {text}
       <span 
-        className="inline-block w-[3px] h-[0.9em] bg-white ml-1 align-middle animate-pulse"
+        className="inline-block w-[3px] h-[0.85em] bg-current ml-1 align-middle animate-blink"
+        aria-hidden="true"
       />
     </span>
   );
