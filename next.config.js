@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: false,
   },
+  allowedDevOrigins: ['*'],
   async headers() {
     return [
       {
