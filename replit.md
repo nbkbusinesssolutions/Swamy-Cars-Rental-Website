@@ -106,6 +106,14 @@ backup/                     # Original static HTML files (archived)
 5. Premium cars = less flashy badges (restraint = luxury)
 
 ## Recent Changes
+- Jan 2026: Mobile UX optimization (360px-430px viewport)
+  - Hero Section: responsive typography (1.625rem mobile, 2.5rem desktop), full-width CTAs
+  - All buttons/tap targets: 48px minimum height for accessibility
+  - CarCard: mobile-first layout with responsive text and spacing
+  - Header: optimized mobile navigation with 48px tap targets
+  - WhatsApp button: adjusted sizing (3.25rem mobile, 3.5rem desktop)
+  - Added prefers-reduced-motion support for accessibility
+  - Mobile-first breakpoint pattern (sm: for desktop overrides)
 - Jan 2026: Brand-specific button colors implemented
   - Google Maps buttons use official Google Blue (#4285F4)
   - WhatsApp buttons use official WhatsApp Green (#25D366)
