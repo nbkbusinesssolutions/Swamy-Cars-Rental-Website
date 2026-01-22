@@ -94,7 +94,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <a
-                    href="https://maps.google.com/?q=Red+Roof+Hotel+Madel+Madgaon+Goa"
+                    href="https://share.google/GzPaEEAaGpJd3KYGk"
                     target="_blank"
                     rel="noopener"
                     className="text-white font-medium hover:text-amber-200 transition-colors"

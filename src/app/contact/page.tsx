@@ -90,7 +90,7 @@ export default function ContactPage() {
               <h3 className="font-display text-xl font-bold text-gray-900 mb-3">Location</h3>
               <p className="text-gray-600 mb-4">Visit us in person</p>
               <a
-                href="https://maps.app.goo.gl/wb3oQL4we6FBymwT8"
+                href="https://share.google/GzPaEEAaGpJd3KYGk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-amber-600 font-semibold hover:text-amber-700"

@@ -636,7 +636,7 @@ export default function HomePage() {
               </div>
 
               <a
-                href="https://maps.app.goo.gl/wb3oQL4we6FBymwT8"
+                href="https://share.google/GzPaEEAaGpJd3KYGk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-primary-orange)] text-white font-semibold rounded-xl hover:shadow-lg transition-all"
