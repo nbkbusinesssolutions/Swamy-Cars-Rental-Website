@@ -62,8 +62,38 @@ backup/                     # Original static HTML files (archived)
 - Technical modernization only (migration to Next.js/TypeScript)
 - Framer Motion for animations (replacing CSS animations)
 
+## Color System (Refined per Agency Audit)
+
+### Primary Colors
+- **Brand Orange** `#F39C12` - Conversion CTAs, prices, action elements (use sparingly)
+- **Dark Slate** `#0f172a` - Footer, authority sections, trust anchors
+
+### Neutral Stack (90% of UI)
+- Text: `gray-900` → `gray-500` (heading to muted hierarchy)
+- Backgrounds: `white`, `gray-50`, `#F8F9FA`
+- Borders: `gray-100`
+
+### Badge System (Tiered)
+- **Tier 1 (Gradients)**: Most Wanted, Budget Pick, Premium MPV - business-critical
+- **Tier 2 (Flat)**: City Favorite, SUV Favorite, Family Ready, Compact - informational only
+
+### CTA Colors
+- Primary: Solid orange `#F39C12` (no gradients for trust)
+- WhatsApp: Official green `#25D366`
+- Call: Neutral gray background
+
+### Design Rules
+1. Orange = conversion only (1-2 elements per screen max)
+2. Blue = support only (links, icons, info)
+3. Neutrals = majority of UI
+4. Gradients = rare & meaningful (Tier 1 badges only)
+5. Premium cars = less flashy badges (restraint = luxury)
+
 ## Recent Changes
-- Jan 2026: Complete migration from static HTML/Vite to Next.js 14+ with TypeScript
+- Jan 2026: Refined color system per agency audit - reduced accent colors, solid CTAs
+- Implemented tiered badge system (Tier 1 gradients, Tier 2 flat)
+- Replaced gradient CTAs with solid orange for better trust/conversion
+- Complete migration from static HTML/Vite to Next.js 14+ with TypeScript
 - Implemented Tailwind CSS v4 with @theme variables for design tokens
 - Added Framer Motion animations for scroll effects and page transitions
 - Created component library: Header, Footer, CarCard, AnimatedSection, Counter
