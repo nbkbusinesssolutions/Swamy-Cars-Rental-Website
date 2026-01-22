@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 interface TypingTextProps {
   phrases: string[];
@@ -58,20 +57,9 @@ export default function TypingText({
 
   return (
     <span className={className}>
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={displayedText}
-          initial={{ opacity: 0.8 }}
-          animate={{ opacity: 1 }}
-          className="inline"
-        >
-          {displayedText}
-        </motion.span>
-      </AnimatePresence>
-      <motion.span
-        animate={{ opacity: [1, 0, 1] }}
-        transition={{ duration: 0.8, repeat: Infinity, ease: 'steps(2)' }}
-        className="inline-block w-[3px] h-[1em] bg-current ml-1 align-middle"
+      <span className="inline">{displayedText}</span>
+      <span 
+        className="inline-block w-[3px] h-[0.9em] bg-white ml-1 align-middle animate-pulse"
       />
     </span>
   );
