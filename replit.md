@@ -22,7 +22,9 @@ src/
 │   ├── WhatsAppButton.tsx  # Floating WhatsApp CTA
 │   ├── CarCard.tsx         # Fleet car display card
 │   ├── AnimatedSection.tsx # Framer Motion scroll animations
-│   └── Counter.tsx         # Animated counter for stats
+│   ├── Counter.tsx         # Animated counter for stats
+│   ├── HeroSection.tsx     # Hero with typing animation, glassmorphism CTAs
+│   └── TypingText.tsx      # Rotating text with typewriter effect
 ├── data/
 │   └── fleet.ts            # Fleet data (7 cars with pricing)
 └── lib/
