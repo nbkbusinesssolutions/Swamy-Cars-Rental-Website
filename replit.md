@@ -70,11 +70,12 @@ backup/                     # Original static HTML files (archived)
 | Orange | `#F39C12` | Book Now, primary CTAs, prices |
 | Orange Hover | `#E67E22` | Hover states only (never static) |
 
-### Secondary (Supporting Actions)
+### Brand-Specific (Third-Party Services)
 | Color | Hex | Usage |
 |-------|-----|-------|
-| WhatsApp Green | `#25D366` | WhatsApp CTA only |
-| Call Gray | `#F3F4F6` | Phone CTA (neutral, non-competing) |
+| WhatsApp Green | `#25D366` | WhatsApp buttons, icons only |
+| Google Maps Blue | `#4285F4` | Google Maps buttons, location icons |
+| Call/Phone Gray | `#6B7280` | Phone/call CTAs (neutral, non-competing) |
 
 ### Neutral Stack (90% of UI)
 | Color | Usage |
@@ -103,6 +104,11 @@ backup/                     # Original static HTML files (archived)
 5. Premium cars = less flashy badges (restraint = luxury)
 
 ## Recent Changes
+- Jan 2026: Brand-specific button colors implemented
+  - Google Maps buttons use official Google Blue (#4285F4)
+  - WhatsApp buttons use official WhatsApp Green (#25D366)
+  - Phone/Call buttons use neutral gray (non-competing)
+  - Location icons updated to Google Maps blue across all pages
 - Jan 2026: Full CRO color audit implementation
   - Removed blue, purple, sky colors from CSS variables
   - Phone icons/links changed to neutral gray

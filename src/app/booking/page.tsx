@@ -441,10 +441,9 @@ Please confirm availability and total cost. Thank you!`;
             </StaggerItem>
 
             <StaggerItem className="text-center p-6 rounded-2xl bg-white shadow-sm border border-gray-100">
-              <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-xl bg-amber-100 text-amber-600">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-xl bg-blue-100 text-[#4285F4]">
+                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
               </div>
               <h3 className="font-display font-bold text-gray-900 mb-2">Location</h3>
