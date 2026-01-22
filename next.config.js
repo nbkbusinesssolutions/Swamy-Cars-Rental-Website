@@ -4,7 +4,13 @@ const nextConfig = {
   images: {
     unoptimized: false,
   },
-  allowedDevOrigins: ['*'],
+  allowedDevOrigins: [
+    '*.replit.dev',
+    '*.sisko.replit.dev',
+    '42962344-2f9a-42c2-ae7f-d50379562371-00-1lgx6sxq5jwiv.sisko.replit.dev',
+    '127.0.0.1',
+    'localhost',
+  ],
   async headers() {
     return [
       {
