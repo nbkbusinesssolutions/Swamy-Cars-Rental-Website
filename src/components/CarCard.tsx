@@ -34,14 +34,14 @@ export default function CarCard({ car, index = 0 }: CarCardProps) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute top-3 left-3">
-          <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-full shadow-md ${
-            car.badge === 'Most Wanted' ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white' :
-            car.badge === 'City Favorite' ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white' :
-            car.badge === 'Budget Pick' ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white' :
-            car.badge === 'SUV Favorite' ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white' :
-            car.badge === 'Family Ready' ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white' :
+          <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-full shadow-sm ${
+            car.badge === 'Most Wanted' ? 'bg-gradient-to-r from-[var(--color-primary-orange)] to-amber-500 text-white' :
+            car.badge === 'Budget Pick' ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white' :
             car.badge === 'Premium MPV' ? 'bg-gradient-to-r from-slate-700 to-slate-900 text-white' :
-            car.badge === 'Compact' ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' :
+            car.badge === 'City Favorite' ? 'bg-blue-50 text-blue-700 border border-blue-200' :
+            car.badge === 'SUV Favorite' ? 'bg-amber-50 text-amber-700 border border-amber-200' :
+            car.badge === 'Family Ready' ? 'bg-slate-100 text-slate-700 border border-slate-200' :
+            car.badge === 'Compact' ? 'bg-gray-100 text-gray-700 border border-gray-200' :
             'bg-white/95 backdrop-blur-sm text-gray-800'
           }`}>
             {car.badge === 'Most Wanted' && (

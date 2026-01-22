@@ -114,7 +114,7 @@ export default function AboutPage() {
       <section className="section-shell bg-white">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="section-heading">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 text-sm font-semibold rounded-full mb-4">
               Why Us
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
@@ -192,7 +192,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-shell bg-gradient-to-br from-[var(--color-primary-orange)] to-[var(--color-accent-coral)] text-white">
+      <section className="section-shell bg-[var(--color-primary-orange)] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6">

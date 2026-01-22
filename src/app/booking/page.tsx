@@ -88,7 +88,7 @@ export default function BookingPage() {
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-[var(--color-primary-orange)] text-white font-bold text-sm">
                   {step.step}
                 </div>
-                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-orange-100 to-orange-50 text-[var(--color-primary-orange)]">
+                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-orange-50 text-[var(--color-primary-orange)]">
                   {step.icon}
                 </div>
                 <h3 className="font-display text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
@@ -116,7 +116,7 @@ export default function BookingPage() {
       <section className="section-shell bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="section-heading">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 text-sm font-semibold rounded-full mb-4">
               Our Fleet
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">

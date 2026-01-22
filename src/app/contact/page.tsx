@@ -145,7 +145,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="section-shell bg-gradient-to-br from-[var(--color-primary-orange)] to-[var(--color-accent-coral)] text-white">
+      <section className="section-shell bg-[var(--color-primary-orange)] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6">

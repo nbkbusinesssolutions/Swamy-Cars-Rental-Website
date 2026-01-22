@@ -311,14 +311,14 @@ export default function HomePage() {
                   </div>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{testimonial.review}</p>
                   <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[var(--color-primary-orange)] to-[var(--color-accent-coral)] flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-9 h-9 rounded-full bg-[var(--color-primary-orange)] flex items-center justify-center text-white font-bold text-sm">
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="font-semibold text-gray-900 text-sm">{testimonial.name}</span>
                         {testimonial.badge && (
-                          <span className="text-[10px] bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded-full">{testimonial.badge}</span>
+                          <span className="text-[10px] bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded-full">{testimonial.badge}</span>
                         )}
                       </div>
                       <span className="text-xs text-gray-500">{testimonial.time}</span>
@@ -355,7 +355,7 @@ export default function HomePage() {
       <section className="section-shell bg-white">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="section-heading">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-600 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 text-sm font-semibold rounded-full mb-4">
               How It Works
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">
@@ -401,7 +401,7 @@ export default function HomePage() {
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-[var(--color-primary-orange)] text-white font-bold text-sm">
                   {step.step}
                 </div>
-                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-orange-100 to-orange-50 text-[var(--color-primary-orange)]">
+                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-orange-50 text-[var(--color-primary-orange)]">
                   {step.icon}
                 </div>
                 <h3 className="font-display text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
@@ -412,7 +412,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-shell bg-gradient-to-br from-[var(--color-primary-orange)] to-[var(--color-accent-coral)] text-white">
+      <section className="section-shell bg-[var(--color-primary-orange)] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6">
