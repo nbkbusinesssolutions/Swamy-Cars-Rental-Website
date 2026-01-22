@@ -91,6 +91,7 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.875rem 1.75rem;
+    min-height: 48px;
     background: var(--color-primary-orange);
     color: white;
     font-weight: 600;
@@ -112,6 +113,7 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.875rem 1.75rem;
+    min-height: 48px;
     background: var(--color-cta-whatsapp);
     color: white;
     font-weight: 600;
@@ -119,6 +121,11 @@
     transition: all var(--motion-fast) var(--ease-out);
     cursor: pointer;
     border: none;
+  }
+
+  .btn-whatsapp:active {
+    background: var(--color-cta-whatsapp-hover);
+    transform: scale(0.98);
   }
 
   .btn-whatsapp:hover {
@@ -133,6 +140,7 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.875rem 1.75rem;
+    min-height: 48px;
     background: transparent;
     color: var(--color-text-heading);
     font-weight: 600;
@@ -194,10 +202,10 @@
 
   .floating-whatsapp {
     position: fixed;
-    bottom: 1.25rem;
-    right: 1.25rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.25rem;
+    height: 3.25rem;
     background: var(--color-cta-whatsapp);
     color: white;
     border-radius: 9999px;
@@ -207,6 +215,15 @@
     justify-content: center;
     transition: all var(--motion-fast) var(--ease-out);
     z-index: 50;
+  }
+
+  @media (min-width: 640px) {
+    .floating-whatsapp {
+      bottom: 1.25rem;
+      right: 1.25rem;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
   }
 
   .floating-whatsapp:hover {
@@ -263,5 +280,18 @@
 
   .animate-cursor {
     animation: cursor-blink 0.8s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-pulse-glow,
+    .animate-cursor {
+      animation: none;
+    }
+
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
